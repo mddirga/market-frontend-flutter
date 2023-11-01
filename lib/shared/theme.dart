@@ -11,6 +11,7 @@ Color subtitleColor = const Color(0xff504F5E);
 Color textFormColor = const Color(0xffACABB2);
 Color backgroundColor1 = const Color(0xffF1F1F1);
 Color backgroundColor2 = const Color(0xffFFFFFF);
+Color backgroundColor3 = const Color(0xff92E3FD);
 Color primaryTextColor = const Color(0xff2E2E2E);
 Color secondaryTextColor = const Color(0xffF1F0F2);
 Color transparentColor = Colors.transparent;
