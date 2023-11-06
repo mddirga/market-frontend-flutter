@@ -54,9 +54,130 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget categories() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: defaultMargin,
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SizedBox(
+                width: defaultMargin,
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: const EdgeInsets.only(right: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: primaryColor,
+                ),
+                child: Text(
+                  'Semua Produk',
+                  style: secondaryTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: const EdgeInsets.only(right: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: transparentColor,
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                ),
+                child: Text(
+                  'Running',
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: const EdgeInsets.only(right: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: transparentColor,
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                ),
+                child: Text(
+                  'Training',
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: const EdgeInsets.only(right: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: transparentColor,
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                ),
+                child: Text(
+                  'Basketball',
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 10,
+                ),
+                margin: const EdgeInsets.only(right: 6),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: transparentColor,
+                  border: Border.all(
+                    color: subtitleColor,
+                  ),
+                ),
+                child: Text(
+                  'Hiking',
+                  style: subtitleTextStyle.copyWith(
+                    fontSize: 13,
+                    fontWeight: medium,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
+        categories(),
       ],
     );
   }
