@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market/shared/theme.dart';
+import 'package:market/widgets/product_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -15,25 +16,12 @@ class HomePage extends StatelessWidget {
         ),
         child: Row(
           children: [
-            Container(
-              width: 40,
-              height: 40,
-              decoration: const BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: AssetImage('assets/images/image_profile.png'),
-                ),
-              ),
-            ),
-            const SizedBox(
-              width: 12,
-            ),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hallo Guest',
+                    'Hallo, Guest1234',
                     style: primaryTextStyle.copyWith(
                       fontSize: 15,
                       fontWeight: semiBold,
@@ -47,6 +35,24 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, '/notification');
+              },
+              child: Badge(
+                label: Text(
+                  '4',
+                  style: secondaryTextStyle.copyWith(
+                    fontSize: 12,
+                    fontWeight: medium,
+                  ),
+                ),
+                child: const Icon(
+                  Icons.notifications_none,
+                  size: 26,
+                ),
               ),
             ),
           ],
@@ -174,10 +180,65 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget popularProductsTitle() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: defaultMargin,
+          left: defaultMargin,
+          right: defaultMargin,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Popular Products',
+              style: primaryTextStyle.copyWith(
+                fontSize: 15,
+                fontWeight: semiBold,
+              ),
+            ),
+            Text(
+              'Lihat Semua',
+              style: viewAllTextStyle.copyWith(
+                fontSize: 12,
+                fontWeight: semiBold,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget popularProducts() {
+      return Container(
+        margin: const EdgeInsets.only(top: 14),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: [
+              SizedBox(
+                width: defaultMargin,
+              ),
+              const Row(
+                children: [
+                  ProductCard(),
+                  ProductCard(),
+                  ProductCard(),
+                  ProductCard(),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
         categories(),
+        popularProductsTitle(),
+        popularProducts(),
       ],
     );
   }

@@ -13,6 +13,7 @@ Color backgroundColor1 = const Color(0xffF1F1F1);
 Color backgroundColor2 = const Color(0xffFFFFFF);
 Color backgroundColor3 = const Color(0xff92E3FD);
 Color primaryTextColor = const Color(0xff2E2E2E);
+Color primaryCardColor = const Color(0xffECEDEF);
 Color secondaryTextColor = const Color(0xffF1F0F2);
 Color transparentColor = Colors.transparent;
 
@@ -24,6 +25,9 @@ TextStyle secondaryTextStyle =
 
 TextStyle priceTextStyle =
     TextStyle(fontFamily: "Quicksand", color: priceColor);
+
+TextStyle viewAllTextStyle =
+    TextStyle(fontFamily: "Quicksand", color: alertColor);
 
 TextStyle subtitleTextStyle =
     TextStyle(fontFamily: "Quicksand", color: subtitleColor);
