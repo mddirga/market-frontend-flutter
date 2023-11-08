@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market/shared/theme.dart';
 import 'package:market/widgets/product_card.dart';
+import 'package:market/widgets/product_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -200,7 +201,7 @@ class HomePage extends StatelessWidget {
             Text(
               'Lihat Semua',
               style: viewAllTextStyle.copyWith(
-                fontSize: 12,
+                fontSize: 11,
                 fontWeight: semiBold,
               ),
             ),
@@ -233,12 +234,59 @@ class HomePage extends StatelessWidget {
       );
     }
 
+    Widget newArrivalsTitle() {
+      return Container(
+        margin: EdgeInsets.only(
+          top: 15,
+          left: defaultMargin,
+          right: defaultMargin,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'New Arrivals',
+              style: primaryTextStyle.copyWith(
+                fontSize: 15,
+                fontWeight: semiBold,
+              ),
+            ),
+            Text(
+              'Lihat Semua',
+              style: viewAllTextStyle.copyWith(
+                fontSize: 11,
+                fontWeight: semiBold,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget newArrivals() {
+      return Container(
+        margin: const EdgeInsets.only(
+          top: 14,
+        ),
+        child: const Column(
+          children: [
+            ProductTile(),
+            ProductTile(),
+            ProductTile(),
+            ProductTile(),
+          ],
+        ),
+      );
+    }
+
     return ListView(
       children: [
         header(),
         categories(),
         popularProductsTitle(),
         popularProducts(),
+        newArrivalsTitle(),
+        newArrivals(),
       ],
     );
   }
