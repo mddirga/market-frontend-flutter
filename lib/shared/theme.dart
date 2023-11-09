@@ -18,25 +18,25 @@ Color secondaryTextColor = const Color(0xffF1F0F2);
 Color transparentColor = Colors.transparent;
 
 TextStyle primaryTextStyle =
-    TextStyle(fontFamily: "Quicksand", color: primaryTextColor);
+    TextStyle(fontFamily: "Open+Sans", color: primaryTextColor);
 
 TextStyle secondaryTextStyle =
-    TextStyle(fontFamily: "Quicksand", color: secondaryTextColor);
+    TextStyle(fontFamily: "Open+Sans", color: secondaryTextColor);
 
 TextStyle priceTextStyle =
-    TextStyle(fontFamily: "Quicksand", color: priceColor);
+    TextStyle(fontFamily: "Open+Sans", color: priceColor);
 
 TextStyle viewAllTextStyle =
-    TextStyle(fontFamily: "Quicksand", color: alertColor);
+    TextStyle(fontFamily: "Open+Sans", color: alertColor);
 
 TextStyle subtitleTextStyle =
-    TextStyle(fontFamily: "Quicksand", color: subtitleColor);
+    TextStyle(fontFamily: "Open+Sans", color: subtitleColor);
 
 TextStyle textFormTextStyle =
-    TextStyle(fontFamily: "Quicksand", color: textFormColor);
+    TextStyle(fontFamily: "Open+Sans", color: textFormColor);
 
 TextStyle registerTextStyle =
-    TextStyle(fontFamily: "Quicksand", color: primaryColor);
+    TextStyle(fontFamily: "Open+Sans", color: primaryColor);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;

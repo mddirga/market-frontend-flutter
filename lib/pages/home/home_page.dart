@@ -46,8 +46,8 @@ class HomePage extends StatelessWidget {
                 label: Text(
                   '4',
                   style: secondaryTextStyle.copyWith(
-                    fontSize: 12,
-                    fontWeight: medium,
+                    fontSize: 10,
+                    fontWeight: regular,
                   ),
                 ),
                 child: const Icon(
