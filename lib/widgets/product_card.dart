@@ -8,14 +8,21 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 130,
-      height: 168,
-      margin: EdgeInsets.only(
-        right: defaultMargin,
+      height: 180,
+      margin: const EdgeInsets.only(
+        right: 14,
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: primaryCardColor,
-      ),
+          borderRadius: BorderRadius.circular(10),
+          color: primaryCardColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.5),
+              spreadRadius: 0.5,
+              blurRadius: 1,
+              offset: const Offset(0.5, 0),
+            ),
+          ]),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 10,
@@ -57,7 +64,7 @@ class ProductCard extends StatelessWidget {
               height: 4,
             ),
             Text(
-              'Rp 246.000',
+              'Rp246.000',
               style: priceTextStyle.copyWith(
                 fontSize: 14,
                 fontWeight: semiBold,

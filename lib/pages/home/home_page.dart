@@ -211,23 +211,20 @@ class HomePage extends StatelessWidget {
     }
 
     Widget popularProducts() {
-      return Container(
-        margin: const EdgeInsets.only(top: 14),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
+      return SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            vertical: 16,
+            horizontal: defaultMargin,
+          ),
+          child: const Row(
             children: [
-              SizedBox(
-                width: defaultMargin,
-              ),
-              const Row(
-                children: [
-                  ProductCard(),
-                  ProductCard(),
-                  ProductCard(),
-                  ProductCard(),
-                ],
-              ),
+              ProductCard(),
+              ProductCard(),
+              ProductCard(),
+              ProductCard(),
+              ProductCard(),
             ],
           ),
         ),
