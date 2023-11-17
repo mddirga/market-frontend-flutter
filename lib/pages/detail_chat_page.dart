@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market/shared/theme.dart';
+import 'package:market/widgets/chat_bubble.dart';
 
 class DetailChatPage extends StatelessWidget {
   const DetailChatPage({super.key});
@@ -10,6 +11,13 @@ class DetailChatPage extends StatelessWidget {
       return AppBar(
         backgroundColor: backgroundColor4,
         centerTitle: false,
+        leading: IconButton(
+          onPressed: () {},
+          icon: const Icon(
+            Icons.arrow_back_rounded,
+            color: Colors.black,
+          ),
+        ),
         title: Row(
           children: [
             Image.asset(
@@ -136,10 +144,29 @@ class DetailChatPage extends StatelessWidget {
       );
     }
 
+    Widget content() {
+      return ListView(
+        padding: EdgeInsets.symmetric(
+          horizontal: defaultMargin,
+        ),
+        children: const [
+          ChatBubble(
+            isSender: true,
+            text: 'Hi, this item is still available?',
+          ),
+          ChatBubble(
+            isSender: false,
+            text: 'Good night, this item is only available in size 42',
+          ),
+        ],
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundColor1,
       appBar: header(),
       bottomNavigationBar: chatInput(),
+      body: content(),
     );
   }
 }
