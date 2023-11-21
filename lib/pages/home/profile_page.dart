@@ -53,9 +53,91 @@ class ProfilePage extends StatelessWidget {
       );
     }
 
+    Widget menuItem(String text) {
+      return Container(
+        margin: const EdgeInsets.only(
+          top: 14,
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              text,
+              style: primaryTextStyle.copyWith(
+                fontSize: 13,
+                fontWeight: regular,
+              ),
+            ),
+            Icon(
+              Icons.chevron_right,
+              color: primaryColor,
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget content() {
+      return Expanded(
+        child: Container(
+          width: double.infinity,
+          padding: EdgeInsets.symmetric(
+            horizontal: defaultMargin,
+          ),
+          decoration: BoxDecoration(
+            color: backgroundColor1,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(
+                height: 20,
+              ),
+              Text(
+                'Account',
+                style: primaryTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
+              ),
+              menuItem(
+                'Edit Profile',
+              ),
+              menuItem(
+                'Your Order',
+              ),
+              menuItem(
+                'Help',
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                'General',
+                style: primaryTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
+              ),
+              menuItem(
+                'Privacy & Policy',
+              ),
+              menuItem(
+                'Term of Service',
+              ),
+              menuItem(
+                'Rate App',
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
     return Column(
       children: [
         header(),
+        content(),
       ],
     );
   }
