@@ -4,6 +4,7 @@ import 'package:market/pages/edit_profile_page.dart';
 import 'package:market/pages/home/main_page.dart';
 import 'package:market/pages/login_page.dart';
 import 'package:market/pages/notification_page.dart';
+import 'package:market/pages/product_page.dart';
 import 'package:market/pages/register_page.dart';
 import 'package:market/pages/splash_page.dart';
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/notification': (context) => const NotificationPage(),
         '/chat-detail': (context) => const DetailChatPage(),
         '/edit-profile': (context) => const EditProfilePage(),
+        '/product': (context) => const ProductPage(),
       },
     );
   }
