@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:market/pages/detail_chat_page.dart';
+import 'package:market/pages/edit_profile_page.dart';
 import 'package:market/pages/home/main_page.dart';
 import 'package:market/pages/login_page.dart';
 import 'package:market/pages/notification_page.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const MainPage(),
         '/notification': (context) => const NotificationPage(),
         '/chat-detail': (context) => const DetailChatPage(),
+        '/edit-profile': (context) => const EditProfilePage(),
       },
     );
   }

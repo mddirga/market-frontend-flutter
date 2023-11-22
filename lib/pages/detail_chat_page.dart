@@ -12,7 +12,9 @@ class DetailChatPage extends StatelessWidget {
         backgroundColor: backgroundColor4,
         centerTitle: false,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(
             Icons.arrow_back_rounded,
             color: Colors.black,

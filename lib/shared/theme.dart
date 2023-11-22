@@ -7,6 +7,7 @@ Color primaryColor = const Color(0xff8E81E8);
 Color secondaryColor = const Color(0xff38ABBE);
 Color alertColor = const Color(0xffED6363);
 Color priceColor = const Color(0xff2C96F1);
+Color checkColor = const Color(0xff6C5ECF);
 Color subtitleColor = const Color(0xff504F5E);
 Color textFormColor = const Color(0xffACABB2);
 Color textFormBackgroundColor = const Color(0xffD8D8D8);
