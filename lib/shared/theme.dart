@@ -16,6 +16,7 @@ Color backgroundColor2 = const Color(0xffFFFFFF);
 Color backgroundColor3 = const Color(0xff92E3FD);
 Color backgroundColor4 = const Color(0xffDDD2D2);
 Color backgroundColor5 = const Color(0xffD2CEF4);
+Color backgroundColor6 = const Color(0xffE7B8B8);
 Color wishlistCardBackgroundColor = const Color(0xffDEDFE5);
 Color primaryTextColor = const Color(0xff2E2E2E);
 Color primaryCardColor = const Color(0xffECEDEF);
